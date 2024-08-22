@@ -77,6 +77,28 @@ class Solution {
                
             return answer;}
             
+
+            public int[] twoSum_1(int[] nums, int target) {
+
+
+                int[] answer=new int[2];
+                int index=0;
+                
+                HashMap<Integer,Integer> hash_map=new HashMap<Integer,Integer>();
+                for( int x : nums){
+                    
+                   if( hash_map.containsKey(target-x)){
+                        
+                        answer[0]=hash_map.get(target-x);
+                        answer[1]=index;
+                   }
+                   else{
+                      hash_map.put(x,index);}
+
+                    index++;
+                }
+                return answer;
+            }
            
         
             }
@@ -84,7 +106,15 @@ class Solution {
 public class leetcode{   
 public static void main(String args[]){
 
-//Driver Code
+
+
+Solution obj=new Solution();
+int[] nums={2,7,11,15};
+
+int[] yo =obj.twoSum_1(nums,9);
+for (int x:yo){
+    System.out.println(x);
+}
 
 
 }
