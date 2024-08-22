@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 class Solution {
-    public boolean isAnagram(String s, String t) {
+    public boolean isAnagram_242(String s, String t) {
         HashMap<Character,Integer> hash_map= new HashMap<Character,Integer>();
         for (int i=0;i<s.length();i++){
             Character ch=s.charAt(i);
@@ -49,7 +49,7 @@ class Solution {
     }
     
     
-        public boolean containsDuplicate(int[] nums) {
+        public boolean containsDuplicate_217(int[] nums) {
             Set<Integer> set = new HashSet<>();
             for (int i=0;i<nums.length;i++){
                     if(set.contains(nums[i])){
@@ -64,7 +64,7 @@ class Solution {
         }
 
         
-            public int[] getConcatenation(int[] nums) {
+            public int[] getConcatenation_1929(int[] nums) {
                 int size=nums.length;
                 int new_size=2*size;
                 int answer[] = new int[new_size];
