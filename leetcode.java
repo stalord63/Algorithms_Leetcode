@@ -99,9 +99,26 @@ class Solution {
                 }
                 return answer;
             }
-           
-        
+            public int lengthOfLastWord_58(String s) {
+
+                int lenghtofword=0;
+                       Boolean found=false;
+                       for (int i=s.length()-1;i>=0;i--){
+                           char ch = s.charAt(i);
+                           if (Character.isLetter(ch)){
+                               lenghtofword++;
+                               found=true;
+                           }
+                              
+                           if (ch==' '&& found==true)  {
+       
+                               break;}
+                           }
+                                return lenghtofword;
+                       }
             }
+        
+            
 
 public class leetcode{   
 public static void main(String args[]){
@@ -109,12 +126,10 @@ public static void main(String args[]){
 
 
 Solution obj=new Solution();
-int[] nums={2,7,11,15};
 
-int[] yo =obj.twoSum_1(nums,9);
-for (int x:yo){
-    System.out.println(x);
-}
+String str= "Hello World";
+int ans=obj.lengthOfLastWord(str);
+System.out.println(ans);
 
 
 }
