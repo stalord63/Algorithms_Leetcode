@@ -116,9 +116,48 @@ class Solution {
                            }
                                 return lenghtofword;
                        }
+
+
+                       public boolean isSubsequence_392(String s, String t) {
+                       int m=s.length();
+                       int n=t.length();
+                       int length=0;
+                       int i=0,j=0;
+                       while(i<m && j< n){
+
+                        char s_char=s.charAt(i);
+                        char t_char=t.charAt(j);
+
+                        if(s_char==t_char){
+                            length++;
+                            i++;
+                        }
+                        j++;
+                    }
+                        if (length==m){
+                            return true;
+                        }
+                        else
+                        return false;
+
+
+                       }
+
+                       public int[] replaceElements(int[] arr) {
+                             int[] ans=new int[arr.length];
+                             int max=arr[0];
+                            for (int i=0;i<arr.length;i++){
+                                if (arr[i]>max){
+                                    ans[i]=arr[i];
+                                    max=arr[i];
+                                }
+                                
+                            }
+                       }
+                       
             }
         
-            
+        
 
 public class leetcode{   
 public static void main(String args[]){
@@ -126,10 +165,8 @@ public static void main(String args[]){
 
 
 Solution obj=new Solution();
-
-String str= "Hello World";
-int ans=obj.lengthOfLastWord(str);
-System.out.println(ans);
+int[] intArray = new int[]{ 17,18,5,4,6,1}; 
+System.out.println(obj.replaceElements(intArray));
 
 
 }
