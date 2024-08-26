@@ -127,6 +127,7 @@ class Solution {
 
                         char s_char=s.charAt(i);
                         char t_char=t.charAt(j);
+                        
 
                         if(s_char==t_char){
                             length++;
@@ -154,6 +155,20 @@ class Solution {
                                 
                             }
                        }
+
+                       public String longestCommonPrefix_14(String[] strs) {
+                        StringBuilder res = new StringBuilder();
+                        for (int i=0;i<strs[0].length();i++){
+                            for (String s: strs)
+                            {
+                                if (i==s.length()  || s.charAt(i)!=strs[0].charAt(i))
+                                return res.toString();
+                            }
+                            res.append(strs[0].charAt(i));
+                
+                        }
+                    return res.toString();
+                    }
                        
             }
         
